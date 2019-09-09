@@ -15,15 +15,19 @@ namespace TDD
         {
             int count = 0;
 
-            foreach (var c in input)
+            if (!string.IsNullOrEmpty(input))
             {
-                if (c.ToString().ToLower() == inputChar.ToString().ToLower())
+                foreach (var c in input)
                 {
-                    count++;
+                    if (c.ToString().ToLower() == inputChar.ToString().ToLower())
+                    {
+                        count++;
+                    }
                 }
+
+                return count;
             }
-                
-            return count;
+            else return -1;
         }
     }
 }

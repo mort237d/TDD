@@ -28,6 +28,9 @@ namespace UnitTestProject1
 
             //Test 2
             Assert.AreEqual(3, ContainsCharCounter("hej med dig Emil", 'e'));
+
+            //Test 3
+            Assert.AreEqual(-1, ContainsCharCounter(null, 'e'));
         }
     }
 }
